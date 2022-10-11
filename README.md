@@ -1,6 +1,8 @@
 # hit-get
 Software Engineering Project 
 
+Team Members: Akhila Chiluveru, Varsha KArinje, Srija Gaddam, Kajal Patil
+
 In one sentence describe what your program will do once completed.
 
  Hit-get is a game, a player can produce bullets, shoots the obstacles which are target for player that are generated on the screen. Score is incremented by one on succesful hit. 
