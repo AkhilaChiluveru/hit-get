@@ -10,8 +10,3 @@ With your group, choose a programming language. What language are you using and 
 We would like to code this in python as it has good gaming libraries, convineient to implemenet with less complexity.  Also, this is a choosen as it is a common language with the members. 
 
 
-
-
-Create a public repository and add the group members and me (leblancPDX) as collaborators
-
-
