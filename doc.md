@@ -11,11 +11,12 @@ Out of your list of features select the most important subset: 1,2,3,4 features 
 
 
 **User stories : **
-1. Create a player -As a developer, Create a player which can release bullets so that I can shoot targets.
-2. Adding bullets - As a developer, add a feature of releasing bullets by player which helps in shooting targets
-3. Adding obstacles -As a developer, create obstacles on screen so that these becomes targets for shooting.
-4. Create Score -As a developer, craete score module to show teh results in the end showing succesful hits. 
-5. Background music- As a developer, I want to add music in the background to enhance the user experience while playing.
+1. Create a player -As a player, I want to create a player icon to play the game.
+2. Adding bullets - As a player, I want to release bullets from player which shoots targets
+3. Adding obstacles -As a player, I should be able to see obstacles on screen so that these becomes targets for shooting.
+4. Create Score -As a player,I want score section to view the number of points received hitting obstacles.
+5. Incrementing Score- As a player, I want to view the score that shows number of succesful hits.
+6. Background music- As a player, I want music in the background to enhance my experience while playing.
 
 
 **Overall structure your project:**
