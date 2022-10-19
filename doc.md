@@ -1,22 +1,78 @@
 **List of features:**
-1. Creation of a game which will have a player that can shoot the targets coming from the top of screen.
-2. On every successful hit, score has to get updated.
-3. Creation of music and background sounds for better user experience.
-4. Add a leaderboard that shows the top score of all attempts.
-5. To provicide- Player selection, obstackle selection and background music selection and settings options.
+1.Build a game where a person can hit an obstacle 
+2.On every hit player can obtain score 
+3.Apply sound effects to the game 
+4.Allow Player and weapon selection
+5.Add scoreboard to retain score history 
 
 **MVP Definition:**
-Our MVP is-> A player able to shoot targets and see the score showing  succesful hit counts in a nice background music.
-Out of your list of features select the most important subset: 1,2,3,4 features together makes the MVP achievable.
-
+Our MVP is-> A player will be able to hit the series of target , which will be destroyed after the collision (Feature 1) 
 
 **User stories : **
-1. Create a player -As a player, I want to create a player icon to play the game.
-2. Adding bullets - As a player, I want to release bullets from player which shoots targets
-3. Adding obstacles -As a player, I should be able to see obstacles on screen so that these becomes targets for shooting.
-4. Create Score -As a player,I want score section to view the number of points received hitting obstacles.
-5. Incrementing Score- As a player, I want to view the score that shows number of succesful hits.
-6. Background music- As a player, I want music in the background to enhance my experience while playing.
+Feature 1: 
+
+1.Create a blank screen 
+    As a Developer, I will load a blank screen so that I can bring up background screen for the game 
+2.Add a person 
+    As a Developer, I will create a person object, so that a user can see a player on screen 
+3.Add movement to the person 
+    As a Developer, I will add movement to the person, so that player can move around the person on screen  
+4.Shoot a bullet 
+    As a Developer, I will create a bullet so that a player can shoot a bullet 
+5.Create a target 
+    As a Developer, I will create a target so that user can hit it with bullets 
+6.Create a series of targets to Shoot 
+    As a Developer, I will create a running series of targets so that a player can have back to back targets to hit 
+7.Randomize the target size 
+    As a Developer, I will randomize the target size so that the game difficulty will be improved 
+8.Destroy the target on the strike 
+    As a Developer, I will destroy the target on collision so that user will know if he has hit the target successfully or not  
+
+Feature 2: 
+
+1.Create a scoreboard 
+    As a Developer, I will create a scoreboard so that user can see scoreboard 
+2.On every strike update the score 
+    As a Developer, I will update the score on collision so that user can see his/her score 
+ 
+
+Feature 3: 
+
+1.Apply Sound to bullet collision 
+    As a Developer, I will add sound effects to bullet collision so that user can hear each successful strike 
+2.Apply background music to game 
+    As a Developer, I will add background music to improve the user experience 
+
+
+Feature 4: 
+
+1.Create a list of players 
+    As a Developer, I will create a player list so that user can select a player as per his/her preference 
+2.On selection, show new player in the game 
+    As a Developer, I will allow the player selection so that user can have variety in game interface  
+3.Create a list of weapons 
+    As a Developer, I will create a weapon list so that user can select a weapon as per his/her preference 
+4.On selection, show new weapon in the game 
+    As a Developer, I will allow the weapon selection so that user can have variety in game interface  
+ 
+
+Feature 5: 
+
+1.Create a scoreboard 
+    As a Developer, I will create a blank scoreboard so that I can have a board to display the score 
+2.Show the score history on the scoreboard (High to low) 
+    As a Developer, I will maintain score history so that User can refer to the past scores 
+
 
 
 **Overall structure your project:**
+--hit-get
+    --classes
+        --background
+        --player
+        --weapon
+        --strike
+        --score
+     --images
+     --sound
+    
