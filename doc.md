@@ -24,7 +24,7 @@ Feature 1:
     
 2.Add a player 
 
-    As a Player, I will create a player object, so that a user can see a player icon on screen 
+    As a Player, I will create a player object, so that I can play the game. 
     
 3.Add movement to the player 
 
