@@ -1,4 +1,5 @@
 **List of features:**
+
 1.Build a game where a person can hit an obstacle 
 
 2.On every hit player can obtain score 
@@ -13,6 +14,7 @@
 Our MVP is-> A player will be able to hit the series of target , which will be destroyed after the collision (Feature 1) 
 
 **User stories : **
+
 Feature 1: 
 
 1.Create a blank screen 
@@ -103,12 +105,20 @@ Feature 5:
 
 **Overall structure your project:**
 --hit-get
+
     --classes
+    
         --background
+        
         --player
+        
         --weapon
+        
         --strike
+        
         --score
+        
      --images
+     
      --sound
     
