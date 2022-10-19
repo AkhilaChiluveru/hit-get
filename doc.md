@@ -30,9 +30,9 @@ Feature 1:
 
     As a Player, I will add movement to the player, so that can move on screen  
     
-4.Shoot a bullet 
+4.Create a bullet 
 
-    As a Player, I will create a bullet so that a player can shoot a bullet 
+    As a Player, I will create a bullet so that a player can release a bullet 
     
 5.Create a target 
 
