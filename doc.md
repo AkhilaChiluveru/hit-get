@@ -32,7 +32,7 @@ Feature 1:
     
 4.Create a bullet 
 
-    As a Player, I will create a bullet so that a player can release a bullet 
+    As a Player, I will create a bullet so that a player can release a bullet to aim targets for hitting
     
 5.Create a target 
 
