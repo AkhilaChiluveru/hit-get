@@ -22,11 +22,11 @@ Feature 1:
 
     As a Player, I will load a blank screen so that I can bring up background screen for the game 
     
-2.Add a person 
+2.Add a player 
 
     As a Player, I will create a player object, so that a user can see a player icon on screen 
     
-3.Add movement to the person 
+3.Add movement to the player 
 
     As a Player, I will add movement to the player, so that can move on screen  
     
