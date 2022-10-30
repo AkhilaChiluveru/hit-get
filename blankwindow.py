@@ -9,19 +9,15 @@ pygame.display.set_caption('Hit-Get')
 clock=pygame.time.Clock() #to fix framerate
 
 #importing images 
-#importing ship
 ship_surf = pygame.image.load('./graphics/ship.png').convert_alpha()
-#importing background
-bg_surf=pygame.image.load('./graphics/background.png').convert_alpha()
-
-#movements
-#movement of ship
-ship_rect=ship_surf.get_rect(center=(window_width/2,window_height/2))  
-
+bg_surf=pygame.image.load('./graphics/background.png').convert()
 
 #importing text
 font=pygame.font.Font('./graphics/subatomic.ttf', 50)
 text_surf = font.render('Hit-Get', True, (255,255,255))
+
+#movements
+ship_rect=ship_surf.get_rect(center=(window_width/2,window_height/2))  
 text_rect= text_surf.get_rect(midbottom=(window_width/2,window_height-80))
 
 while True:
@@ -31,9 +27,9 @@ while True:
 			pygame.quit()
 			sys.exit()
 		
-	#To set framerate. 		
-	clock.tick(60) #speed doesnt depend on while loop
-
+	#To set framerate, speed doesnt depend on while loop
+	clock.tick(60) 
+	
 	#mouse inputs to handle player
 	ship_rect.center= pygame.mouse.get_pos()
  
