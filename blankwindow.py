@@ -9,18 +9,17 @@ pygame.display.set_caption('Hit-Get')
 clock=pygame.time.Clock() #to fix framerate
 
 #importing images 
-ship_surf = pygame.image.load('hit-get/graphics/ship.png').convert_alpha()
+ship_surf = pygame.image.load('./graphics/ship.png').convert_alpha()
 
-#x is constant as player moves slowly to the top.
-ship_y_pos=500  
+ship_rect=ship_surf.get_rect(center=(window_width/2,window_height/2))  
 
 #importing background
-bg_surf=pygame.image.load('hit-get/graphics/background.png').convert_alpha()
+bg_surf=pygame.image.load('./graphics/background.png').convert_alpha()
 
 #importing text
-font=pygame.font.Font('hit-get/graphics/subatomic.ttf', 50)
+font=pygame.font.Font('./graphics/subatomic.ttf', 50)
 text_surf = font.render('Hit-Get', True, (255,255,255))
-
+text_rect= text_surf.get_rect(midbottom=(window_width/2,window_height-80))
 while True: #to keep our game running
 	#input
 	for event in pygame.event.get():
@@ -32,9 +31,10 @@ while True: #to keep our game running
 	#updates
 	display_surface.fill((0,0,0))
 	display_surface.blit(bg_surf,(0,0))
-	ship_y_pos-=1
-	display_surface.blit(ship_surf,(300,ship_y_pos))
-	display_surface.blit(text_surf,(500,200))
+	if ship_rect.top > 0:
+		ship_rect.y-=4
+	display_surface.blit(ship_surf,ship_rect)
+	display_surface.blit(text_surf,text_rect)
 	
 
 	#showing the frame to the user
