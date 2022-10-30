@@ -1,7 +1,7 @@
 import pygame, sys
 pygame.init()
 window_width,window_height=1280,720
-display_surface=pygame.display.set_mode((screen_width,screen_height))
+display_surface=pygame.display.set_mode((window_width,window_height))
 #setting the screen title
 pygame.display.set_caption('Hit-Get')
 
