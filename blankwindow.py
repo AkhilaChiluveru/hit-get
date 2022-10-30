@@ -1,3 +1,4 @@
+
 import pygame, sys
 pygame.init()
 window_width,window_height=1280,720
@@ -31,6 +32,7 @@ while True: #to keep our game running
 
 	#showing the frame to the user
 	pygame.display.update()
+
 
 
 
