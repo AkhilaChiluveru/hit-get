@@ -123,3 +123,15 @@ Feature 5:
      
      --sound
     
+ 
+Sprint-1
+
+1.Create a blank screen -Medium
+2.Add a player  - Medium
+3.Add movement to the player - Small
+4.Create a bullet - Small
+5.Create a target - Small
+
+Sprint-2
+
+Sprint-3   
