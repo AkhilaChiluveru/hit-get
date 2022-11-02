@@ -1,5 +1,6 @@
 import pygame, sys
-from Player import Player 
+from Player import Player
+from Bullet import Bullet 
 
 pygame.init()
 window_width,window_height=1280,720
@@ -11,10 +12,12 @@ clock=pygame.time.Clock() #to fix framerate
 bg_surf=pygame.image.load('./graphics/background.png').convert()
 
 #groups
-hit_get_group=pygame.sprite.Group()
+player_group=pygame.sprite.Group()
+bullet_group=pygame.sprite.Group()
 
 #object creation
-player=Player(hit_get_group)
+player=Player(player_group)
+bullet=Bullet((100,300),bullet_group)
 
 
 while(True):
@@ -34,7 +37,8 @@ while(True):
     display_surface.blit(bg_surf,(0,0))
 
     #graphics on to the screen
-    hit_get_group.draw(display_surface)
+    player_group.draw(display_surface)
+    bullet_group.draw(display_surface)
 
     #displaying frames to user
     pygame.display.update()
