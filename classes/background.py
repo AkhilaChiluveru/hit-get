@@ -1,6 +1,8 @@
 import pygame, sys
 from Player import Player
 from Bullet import Bullet 
+from Targets import Targets 
+
 
 pygame.init()
 window_width,window_height=1280,720
@@ -14,11 +16,12 @@ bg_surf=pygame.image.load('./graphics/background.png').convert()
 #groups
 player_group=pygame.sprite.Group()
 bullet_group=pygame.sprite.Group()
+targets_group=pygame.sprite.Group()
 
 #object creation
 player=Player(player_group)
 bullet=Bullet((100,300),bullet_group)
-
+target=Targets((100,300),targets_group)
 
 while(True):
     #input
@@ -39,6 +42,7 @@ while(True):
     #graphics on to the screen
     player_group.draw(display_surface)
     bullet_group.draw(display_surface)
+    targets_group.draw(display_surface)
 
     #displaying frames to user
     pygame.display.update()
