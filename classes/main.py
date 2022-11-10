@@ -1,6 +1,5 @@
 import pygame, sys
 from Player import Player
-from Bullet import Bullet 
 from Targets import Targets 
 
 
@@ -20,7 +19,6 @@ targets_group=pygame.sprite.Group()
 
 #object creation
 player=Player(player_group)
-bullet=Bullet((100,300),bullet_group)
 target=Targets((100,300),targets_group)
 
 while(True):
@@ -37,14 +35,13 @@ while(True):
     display_surface.blit(bg_surf,(0,0))
 
     #updates
-    player_group.update()
-    
+    player_group.update(bullet_group)
+    bullet_group.update(dt)
+
     #graphics on to the screen
     player_group.draw(display_surface)
     bullet_group.draw(display_surface)
     targets_group.draw(display_surface)
-
-    
 
     #displaying frames to user
     pygame.display.update()
