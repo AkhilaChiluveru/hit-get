@@ -5,3 +5,8 @@ class Player(pygame.sprite.Sprite):
         super().__init__(groups)
         self.image=pygame.image.load('./graphics/player.png').convert_alpha()
         self.rect=self.image.get_rect(center=(window_width/2,window_height/2))
+    def input_position(self):
+        pos=pygame.mouse.get_pos()
+        self.rect.center=pos
+    def update(self):
+        self.input_position()

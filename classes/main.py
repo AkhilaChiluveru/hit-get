@@ -39,6 +39,9 @@ while(True):
     #background
     display_surface.blit(bg_surf,(0,0))
 
+    #updates
+    player_group.update()
+
     #graphics on to the screen
     player_group.draw(display_surface)
     bullet_group.draw(display_surface)
