@@ -32,17 +32,19 @@ while(True):
 
     #frame rate. 
     dt=clock.tick()/1000
-    
-    #Player movements
-    player.rect.center=pygame.mouse.get_pos()
 
     #background
     display_surface.blit(bg_surf,(0,0))
 
+    #updates
+    player_group.update()
+    
     #graphics on to the screen
     player_group.draw(display_surface)
     bullet_group.draw(display_surface)
     targets_group.draw(display_surface)
+
+    
 
     #displaying frames to user
     pygame.display.update()
