@@ -10,7 +10,13 @@ pygame.display.set_caption('Hit-Get')
 clock=pygame.time.Clock() #to fix framerate
 
 #background 
-bg_surf=pygame.image.load('./graphics/background.png').convert()
+bg_surf=pygame.image.load('../graphics/background.png').convert()
+
+#importing text
+font=pygame.font.Font('../graphics/subatomic.ttf', 50)
+text_surf = font.render('Hit-Get', True, (255,255,255))
+text_rect= text_surf.get_rect(midbottom=(window_width/2,window_height-80))
+
 
 #groups
 player_group=pygame.sprite.Group()
@@ -37,6 +43,7 @@ while(True):
     #updates
     player_group.update(bullet_group)
     bullet_group.update(dt)
+    display_surface.blit(text_surf,text_rect)
 
     #graphics on to the screen
     player_group.draw(display_surface)
