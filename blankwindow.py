@@ -13,7 +13,7 @@ ship_surf = pygame.image.load('./graphics/ship.png').convert_alpha()
 bg_surf=pygame.image.load('./graphics/background.png').convert()
 
 #importing text
-font=pygame.font.Font('./graphics/subatomic.ttf', 50)
+font=pygame.font.Font('../graphics/subatomic.ttf', 50)
 text_surf = font.render('Hit-Get', True, (255,255,255))
 
 #movements
