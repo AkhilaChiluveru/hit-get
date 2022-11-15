@@ -6,6 +6,7 @@ from Score import Score
 
 pygame.init()
 window_width,window_height=1280,720
+scoreCount=0
 display_surface=pygame.display.set_mode((window_width,window_height))
 pygame.display.set_caption('Hit-Get')
 clock=pygame.time.Clock() #to fix framerate
@@ -52,12 +53,12 @@ while(True):
     display_surface.blit(bg_surf,(0,0))
 
     #updates
-    player_group.update(bullet_group)
-    bullet_group.update(dt)
+    player_group.update(bullet_group,targets_group)
+    bullet_group.update(dt,targets_group,scoreCount)
     display_surface.blit(text_surf,text_rect)
-    targets_group.update(dt)
+    targets_group.update(dt,window_height)
 
-    score.display(display_surface,window_width,window_height)
+    score.display(display_surface,window_width,window_height,scoreCount)
 
     #graphics on to the screen
     player_group.draw(display_surface)

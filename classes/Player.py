@@ -1,4 +1,4 @@
-import pygame
+import pygame, sys
 from Bullet import Bullet
 
 window_width,window_height=1280,720
@@ -30,8 +30,14 @@ class Player(pygame.sprite.Sprite):
            self.shoot_time=pygame.time.get_ticks()
            Bullet(self.rect.midtop,bullet_group)
 
-    def update(self,bullet_group):
+    def hit_target(self,target_group):
+        if pygame.sprite.spritecollide(self,target_group,False):
+            pygame.quit()
+            sys.exit()
+
+    def update(self,bullet_group,target_group):
         self.bullet_timer()
         self.bullet_shoot(bullet_group)
         self.input_position()
+        self.hit_target(target_group)
         
