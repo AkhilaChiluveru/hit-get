@@ -12,9 +12,11 @@ class Targets(pygame.sprite.Sprite):
         self.speed=randint(400,600)
 
     #updating the position for the target movement to be a bit more random
-    def update(self,dt):
+    def update(self,dt,WINDOW_HEIGHT):
         self.pos+=self.direction * self.speed * dt
         self.rect.topleft=(round(self.pos.x),round(self.pos.y))
+        if self.rect.top > WINDOW_HEIGHT:
+            self.kill()
 
 
 
