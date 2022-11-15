@@ -2,7 +2,7 @@ import pygame, sys
 from random import randint
 from Player import Player
 from Targets import Targets 
-
+from Score import Score
 
 pygame.init()
 window_width,window_height=1280,720
@@ -32,6 +32,8 @@ target=Targets((100,300),targets_group)
 target_timer=pygame.event.custom_type()
 pygame.time.set_timer(target_timer,400)
 
+score= Score()
+
 while(True):
     #input
     for event in pygame.event.get():
@@ -54,6 +56,8 @@ while(True):
     bullet_group.update(dt)
     display_surface.blit(text_surf,text_rect)
     targets_group.update(dt)
+
+    score.display(display_surface,window_width,window_height)
 
     #graphics on to the screen
     player_group.draw(display_surface)
