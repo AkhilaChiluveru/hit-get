@@ -4,7 +4,7 @@ import pygame
 class Score():
 
 	def __init__(self):
-		self.font = pygame.font.Font('../graphics/subatomic.ttf',50)
+		self.font = pygame.font.Font('./graphics/subatomic.ttf',50)
 
 	def display(self,display_surface,WINDOW_WIDTH,WINDOW_HEIGHT,scoreCount):
 		# exercise: recreate the original display_score function inside of a class
