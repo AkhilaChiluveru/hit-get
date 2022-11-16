@@ -9,7 +9,7 @@ class Score():
 	def display(self,display_surface,WINDOW_WIDTH,WINDOW_HEIGHT,scoreCount):
 		# exercise: recreate the original display_score function inside of a class
 		# actually call it in the game loop
-		score_text = f'Score: {scoreCount}'
+		score_text = f'Score: {pygame.time.get_ticks() // 100}'
 		text_surf = self.font.render(score_text,True,(255,255,255))
 		text_rect = text_surf.get_rect(midbottom = (WINDOW_WIDTH / 2, WINDOW_HEIGHT - 30))
 		display_surface.blit(text_surf,text_rect)
