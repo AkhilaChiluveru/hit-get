@@ -11,6 +11,7 @@ class Player(pygame.sprite.Sprite):
         self.rect=self.image.get_rect(center=(window_width/2,window_height/2))
         self.can_shoot = True
         self.shoot_time= None
+        self.bullet_sound=pygame.mixer.Sound('./sounds/laser.ogg')
 
     def bullet_timer(self):
         if not self.can_shoot:
@@ -29,6 +30,7 @@ class Player(pygame.sprite.Sprite):
            self.can_shoot = False
            self.shoot_time=pygame.time.get_ticks()
            Bullet(self.rect.midtop,bullet_group)
+           self.bullet_sound.play()
 
     def hit_target(self,target_group):
         if pygame.sprite.spritecollide(self,target_group,False):
