@@ -4,7 +4,7 @@ import pygame
 class Score():
 
 	def __init__(self):
-		self.font = pygame.font.Font('./graphics/subatomic.ttf',30)
+		self.font = pygame.font.Font('../graphics/subatomic.ttf',30)
 		global varScore
 		varScore=0
 

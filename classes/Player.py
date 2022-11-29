@@ -7,11 +7,11 @@ class Player(pygame.sprite.Sprite):
     
     def __init__(self,groups):
         super().__init__(groups)
-        self.image=pygame.image.load('./graphics/player.png').convert_alpha()
+        self.image=pygame.image.load('../graphics/player.png').convert_alpha()
         self.rect=self.image.get_rect(center=(window_width/2,window_height/2))
         self.can_shoot = True
         self.shoot_time= None
-        self.bullet_sound=pygame.mixer.Sound('./sounds/laser.ogg')
+        self.bullet_sound=pygame.mixer.Sound('../sounds/laser.ogg')
 
     def bullet_timer(self):
         if not self.can_shoot:
