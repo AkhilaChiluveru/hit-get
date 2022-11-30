@@ -12,7 +12,8 @@ class Player(pygame.sprite.Sprite):
         self.rect=self.image.get_rect(center=(window_width/2,window_height/2))
         self.can_shoot = True
         self.shoot_time= None
-        self.bullet_sound=pygame.mixer.Sound('../sounds/laser.ogg')
+
+        self.bullet_sound=pygame.mixer.Sound('../sounds/bullets.ogg')
         self.font = pygame.font.Font('../graphics/subatomic.ttf',60)
         self.game_over= False
 
