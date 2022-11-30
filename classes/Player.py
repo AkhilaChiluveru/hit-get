@@ -39,11 +39,10 @@ class Player(pygame.sprite.Sprite):
     def hit_target(self,target_group,display_surface):
         if pygame.sprite.spritecollide(self,target_group,False):
             self.game_over=True
-            game_over_text = f'GameOver!!'
-            
-            while self.game_over:
-                text_surf = self.font.render(game_over_text,True,(255,255,255))
-                text_rect = text_surf.get_rect(center = (window_width / 2, window_height /2))
+            game_over_text = f'Game Over!!'
+            text_surf = self.font.render(game_over_text,True,(255,255,255))
+            text_rect = text_surf.get_rect(center = (window_width / 2, window_height /2))
+            while self.game_over:                
                 display_surface.blit(text_surf,text_rect)
                 pygame.draw.rect(
                     display_surface, 
