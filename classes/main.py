@@ -4,7 +4,6 @@ from Player import Player
 from Targets import Targets 
 from Score import Score
 
-
 pygame.init()
 window_width,window_height=1280,720
 display_surface=pygame.display.set_mode((window_width,window_height))
@@ -18,7 +17,6 @@ bg_surf=pygame.image.load('../graphics/background.png').convert()
 font=pygame.font.Font('../graphics/subatomic.ttf', 50)
 text_surf = font.render('Hit-Get', True, (255,255,255))
 text_rect= text_surf.get_rect(midbottom=(window_width/2,window_height-100))
-
 
 #groups
 player_group=pygame.sprite.GroupSingle()
@@ -51,18 +49,17 @@ while(True):
     #frame rate. 
     dt=clock.tick()/1000
 
-    #background
+    #background   
     display_surface.blit(bg_surf,(0,0))
 
     #updates
-    player_group.update(bullet_group,targets_group)
+    player_group.update(bullet_group,targets_group,display_surface)
     bullet_group.update(dt,targets_group)
     display_surface.blit(text_surf,text_rect)
     targets_group.update(dt,window_height)
-
     score.display(display_surface,window_width,window_height)
 
-    #graphics on to the screen
+    #graphics on to the screen 
     player_group.draw(display_surface)
     bullet_group.draw(display_surface)
     targets_group.draw(display_surface)
