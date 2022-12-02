@@ -12,15 +12,7 @@ class Targets_test(unittest.TestCase):
             target_group=pygame.sprite.Group()
             pos=pygame.mouse.get_pos()
             targets=Targets(pos,target_group)
-            self.assertEqual(type(Targets(pos,pygame.sprite.Group())),type(targets))
-        def pygame_modules_have_loaded():
-                if not pygame.image.get_init:
-                        success=False
-                if not pygame.math.get_int:
-                        success=False
-                return success
-        
-        
+            self.assertEqual(type(Targets(pos,pygame.sprite.Group())),type(targets))     
         
 
 if __name__=='__main__':
