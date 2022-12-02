@@ -1,6 +1,7 @@
 import unittest
 import pygame
 from Targets import Targets
+from pygame.locals import*
 display_surface=pygame.display.set_mode((1280,720))
 window_width,window_height=1280,720
 
@@ -18,6 +19,8 @@ class Targets_test(unittest.TestCase):
                 if not pygame.math.get_int:
                         success=False
                 return success
+
+            
 
 if __name__=='__main__':
         unittest.main()
